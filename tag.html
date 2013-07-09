@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tag Cloud</title>
+	<script type="text/javascript" src="./jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="./js-cumulus.js"></script>
+	<script type="text/javascript">
+	var tagCloud1;
+		/* Tag Cloud */
+		var tags1 = [
+			new Tag("on", "100"),
+			new Tag("a","50"),
+			new Tag("a load","50"),
+			new Tag("a load through","50"),
+			new Tag("a result","50"),
+			new Tag("a result of","50"),
+			new Tag("a right","50"),
+			new Tag("a right shoulder","50"),
+			new Tag("an","50")
+		];
+		tagCloud1 = new TagCloud(tags1, 500, 500);
+	</script>
+	<style>
+		#tagCloud1 {
+			padding: 25px;
+		}
+		#jsCumulus2 {
+			color: #white;
+		}
+		.tagCloud {
+			background: transparent url("./bg_blue.jpg") 0 0 repeat;
+		}
+		.tagCloud ul, .tagCloud li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+	
+		.tagCloud .tagClass a {
+			color:white;
+			font-family: Sans;
+			font-weight: normal;
+			padding: 3px;
+			text-align: center;
+			text-decoration: none;
+			vertical-align: middle;
+		}
+		.tagCloud .tagClass a:hover {
+			border: solid 1px red;
+			color: orange;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		tagCloud1.Distribute(document.getElementById("tagCloud1")).Animate();
+	</script>
+
+</body>
+</html>
